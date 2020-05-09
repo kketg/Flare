@@ -93,13 +93,17 @@ public class Application {
 			// creates the GLCapabilities instance and makes the OpenGL
 			// bindings available for use.
 			GL.createCapabilities();
-
+			float r = (float) Math.random();
+			float r2 = (float) Math.random();
+			float r3 = (float) Math.random();
 			// Set the clear color
-			glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
+			glClearColor(r, r2, r3, 0.0f);
+			
 
 			// Run the rendering loop until the user has attempted to close
 			// the window or has pressed the ESCAPE key.
 			while ( !glfwWindowShouldClose(window) ) {
+				
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
 
 				glfwSwapBuffers(window); // swap the color buffers
